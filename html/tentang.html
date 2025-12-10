@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <title>Klinik Bidanku - Tugas Kelompok</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+            },
+            colors: {
+              primary: "#db2777", // Pink Tua (Khas Bidan)
+              secondary: "#fce7f3", // Pink Muda
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <!-- LOGO -->
+        <a href="index.html" class="text-2xl font-bold text-gray-700"> Klinik <span class="text-pink-600">Bidanku</span> </a>
+
+        <!-- MENU DESKTOP -->
+        <div class="hidden md:flex space-x-6 font-medium items-center">
+          <a href="index.html" class="nav-link">Beranda</a>
+          <a href="tentang.html" class="nav-link">Tentang</a>
+          <a href="jadwal.html" class="nav-link">Jadwal</a>
+          <a href="edukasi.html" class="nav-link">Edukasi</a>
+          <a href="kontak.html" class="bg-pink-600 text-white px-5 py-2 rounded-full hover:bg-pink-700 transition shadow-md hover:shadow-lg">Kontak</a>
+        </div>
+
+        <!-- TOGGLE MOBILE -->
+        <button id="nav-toggle" class="md:hidden text-gray-500 hover:text-pink-600">
+          <svg id="icon-menu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- MENU MOBILE -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full">
+        <div class="flex flex-col space-y-4 px-4 py-6 font-medium">
+          <a href="index.html" class="mobile-link nav-link">Beranda</a>
+          <a href="tentang.html" class="mobile-link nav-link">Tentang</a>
+          <a href="jadwal.html" class="mobile-link nav-link">Jadwal</a>
+          <a href="edukasi.html" class="mobile-link nav-link">Edukasi</a>
+          <a href="kontak.html" class="mobile-link bg-pink-600 text-white px-5 py-2 rounded-full text-center hover:bg-pink-700">Kontak</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-4xl mx-auto px-4 py-8 min-h-screen">
+      <!-- TENTANG KAMI -->
+      <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+        <h1 class="text-3xl font-bold text-gray-800 mb-2">Tentang Kami</h1>
+        <p class="text-gray-500 mb-8">
+          Klinik Bidanku adalah layanan kesehatan ibu & anak yang berfokus pada pendampingan kehamilan, persalinan, imunisasi, dan perawatan bayi. Kami hadir untuk memberikan pengalaman pelayanan yang
+          ramah, profesional, dan terpercaya bagi keluarga Indonesia.
+        </p>
+        <!-- PROFIL BIDAN -->
+        <div class="mb-10">
+          <h2 class="text-2xl font-semibold text-primary mb-4">Profil Bidan</h2>
+
+          <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+            <img src="img/bidan-foto.png" alt="Foto Bidan Klinik Bidanku" class="rounded-lg shadow-md border w-[180px] h-[220px] object-cover" />
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-700">Bidan Siti Aisyah Nurhayati, S.Tr.Keb</h3>
+              <p class="text-gray-600 mt-2 leading-relaxed">
+                Seorang bidan berpengalaman lebih dari 15 tahun dalam membantu proses persalinan, pendampingan kehamilan, dan edukasi kesehatan ibu & anak. Dengan pendekatan yang lembut dan penuh
+                empati, beliau selalu memastikan setiap ibu merasa aman dan nyaman selama proses pelayanan.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- VISI & MISI -->
+        <div class="mb-10">
+          <h2 class="text-2xl font-semibold text-primary mb-4">Visi & Misi</h2>
+
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-lg font-bold text-gray-700">Visi</h3>
+              <p class="text-gray-600 mt-1">Menjadi klinik bidan terpercaya yang memberikan layanan berkualitas, edukatif, dan ramah keluarga melalui sistem kesehatan digital yang modern.</p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-gray-700">Misi</h3>
+              <ul class="list-disc ml-5 text-gray-600 space-y-1">
+                <li>Memberikan pelayanan kesehatan ibu & anak secara profesional dan humanis.</li>
+                <li>Menyediakan informasi kesehatan yang akurat dan mudah diakses.</li>
+                <li>Mendukung proses persalinan aman dan nyaman bagi setiap ibu.</li>
+                <li>Mengoptimalkan teknologi digital untuk meningkatkan kenyamanan pasien.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- GALERI FASILITAS -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div class="rounded-xl overflow-hidden shadow-md">
+            <img src="img/ruang-tunggu.png" alt="Ruang Tunggu Klinik" class="w-full h-56 object-cover" />
+          </div>
+
+          <div class="rounded-xl overflow-hidden shadow-md">
+            <img src="img/ruang-periksa.png" alt="Ruang Periksa Klinik" class="w-full h-56 object-cover" />
+          </div>
+
+          <div class="rounded-xl overflow-hidden shadow-md">
+            <img src="img/ruang-inap.png" alt="Ruang Inap Klinik" class="w-full h-56 object-cover" />
+          </div>
+        </div>
+
+        <!-- KENAPA MEMILIH KAMI -->
+        <div class="mt-10">
+          <h2 class="text-2xl font-semibold text-primary mb-4">Mengapa Memilih Klinik Bidanku?</h2>
+
+          <ul class="list-disc ml-5 text-gray-600 space-y-1">
+            <li>Bidan berpengalaman dan tersertifikasi.</li>
+            <li>Fasilitas lengkap dan nyaman untuk ibu & anak.</li>
+            <li>Layanan cepat, responsif, dan ramah keluarga.</li>
+            <li>Akses informasi kesehatan yang mudah melalui platform digital.</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <p>&copy; 2025 Klinik Bidanku. Sistem Informasi E-Health.</p>
+      </div>
+    </footer>
+  </body>
+
+  <script src="js/main.js"></script>
+</html>
