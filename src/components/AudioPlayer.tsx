@@ -85,10 +85,7 @@ export default function AudioPlayer() {
   };
 
   return (
-    <div
-      className="fixed left-4 right-4 z-40 transition-all duration-300 ease-out"
-      style={{ bottom: `${bottomOffset}px` }}
-    >
+    <div className="fixed left-4 right-4 z-40 transition-all duration-300 ease-out" style={{ bottom: `${bottomOffset}px` }}>
       <div className="max-w-4xl mx-auto bg-white/90 backdrop-blur shadow-xl shadow-pink-200/60 border border-pink-100 rounded-2xl px-4 py-3 flex items-center gap-4">
         <div className="w-11 h-11 rounded-full bg-gradient-to-r from-pink-500 to-pink-600 text-white flex items-center justify-center shadow-md">
           {isPlaying ? (
@@ -105,6 +102,26 @@ export default function AudioPlayer() {
         <div className="flex-1 min-w-0">
           <div className="flex items-center justify-between text-sm text-gray-700 font-semibold">
             <span>Musik Relaksasi & Meditasi</span>
+            <div className="text-xs text-gray-500">
+              Music by{" "}
+              <a
+                href="https://pixabay.com/users/sleepvolume-44054560/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=346581"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-pink-600 hover:text-pink-700 underline font-medium transition"
+              >
+                Sleep Volume
+              </a>{" "}
+              from{" "}
+              <a
+                href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=346581"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-pink-600 hover:text-pink-700 underline font-medium transition"
+              >
+                Pixabay
+              </a>
+            </div>
           </div>
           <p className="text-xs text-gray-500">Dengarkan musik menenangkan untuk kesejahteraan Anda</p>
           <div className="mt-2 flex items-center gap-3">
