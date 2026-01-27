@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
     <link rel="manifest" href="favicon/site.webmanifest" />
     <title>Klinik Bidanku - Tugas Kelompok</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
     <script>
       tailwind.config = {
@@ -66,24 +66,34 @@
     </nav>
 
     <!-- MAIN CONTENT -->
-    <main class="max-w-4xl mx-auto px-4 py-8 min-h-screen">
-      <!-- TENTANG KAMI -->
-      <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-        <h1 class="text-3xl font-bold text-gray-800 mb-2">Tentang Kami</h1>
-        <p class="text-gray-500 mb-8">
-          Klinik Bidanku adalah layanan kesehatan ibu & anak yang berfokus pada pendampingan kehamilan, persalinan, imunisasi, dan perawatan bayi. Kami hadir untuk memberikan pengalaman pelayanan yang
-          ramah, profesional, dan terpercaya bagi keluarga Indonesia.
-        </p>
-        <!-- PROFIL BIDAN -->
-        <div class="mb-10">
-          <h2 class="text-2xl font-semibold text-primary mb-4">Profil Bidan</h2>
+    <main class="max-w-4xl mx-auto px-4 py-12 min-h-screen font-sans">
+      <div class="bg-white p-8 md:p-12 rounded-3xl shadow-lg border border-pink-100">
+        <div class="mb-10 text-center md:text-left">
+          <h1 class="text-4xl font-extrabold text-gray-800 mb-4">Tentang <span class="text-pink-600">Kami</span></h1>
+          <p class="text-gray-500 text-lg leading-relaxed">
+            Klinik Bidanku adalah layanan kesehatan ibu & anak yang berfokus pada pendampingan kehamilan, persalinan, imunisasi, dan perawatan bayi. Kami hadir untuk memberikan pengalaman pelayanan
+            yang ramah, profesional, dan terpercaya bagi keluarga Indonesia.
+          </p>
+        </div>
 
-          <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
-            <img src="img/bidan-foto.png" alt="Foto Bidan Klinik Bidanku" class="rounded-lg shadow-md border w-[180px] h-[220px] object-cover" />
+        <div class="mb-12 bg-pink-50 p-6 rounded-2xl border border-pink-100">
+          <h2 class="text-2xl font-bold text-pink-600 mb-6 flex items-center gap-2">👩‍⚕️ Profil Bidan</h2>
 
-            <div>
-              <h3 class="text-xl font-bold text-gray-700">Bidan Siti Aisyah Nurhayati, S.Tr.Keb</h3>
-              <p class="text-gray-600 mt-2 leading-relaxed">
+          <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+            <div class="relative group">
+              <div class="absolute inset-0 bg-pink-300 rounded-xl blur-lg opacity-40 group-hover:opacity-60 transition"></div>
+              <img
+                src="img/bidan-foto.png"
+                alt="Bidan Siti Aisyah Nurhayati"
+                class="relative rounded-xl shadow-md w-[200px] h-[240px] object-cover border-4 border-white transform group-hover:scale-105 transition duration-300"
+                onerror="this.src = 'https://via.placeholder.com/200x240?text=Foto+Bidan'"
+              />
+            </div>
+
+            <div class="flex-1 text-center md:text-left">
+              <h3 class="text-2xl font-bold text-gray-800">Bidan Siti Aisyah Nurhayati, S.Tr.Keb</h3>
+              <span class="inline-block bg-white text-pink-600 text-xs font-bold px-3 py-1 rounded-full mt-2 mb-4 shadow-sm"> Head Midwife / Kepala Bidan </span>
+              <p class="text-gray-600 leading-relaxed text-lg text-justify">
                 Seorang bidan berpengalaman lebih dari 15 tahun dalam membantu proses persalinan, pendampingan kehamilan, dan edukasi kesehatan ibu & anak. Dengan pendekatan yang lembut dan penuh
                 empati, beliau selalu memastikan setiap ibu merasa aman dan nyaman selama proses pelayanan.
               </p>
@@ -91,59 +101,118 @@
           </div>
         </div>
 
-        <!-- VISI & MISI -->
-        <div class="mb-10">
-          <h2 class="text-2xl font-semibold text-primary mb-4">Visi & Misi</h2>
-
-          <div class="space-y-6">
-            <div>
-              <h3 class="text-lg font-bold text-gray-700">Visi</h3>
-              <p class="text-gray-600 mt-1">Menjadi klinik bidan terpercaya yang memberikan layanan berkualitas, edukatif, dan ramah keluarga melalui sistem kesehatan digital yang modern.</p>
+        <div class="mb-12 grid md:grid-cols-2 gap-8">
+          <div>
+            <h2 class="text-2xl font-bold text-pink-600 mb-4">🚀 Visi</h2>
+            <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 h-full">
+              <p class="text-gray-700 italic font-medium leading-relaxed">
+                "Menjadi klinik bidan terpercaya yang memberikan layanan berkualitas, edukatif, dan ramah keluarga melalui sistem kesehatan digital yang modern."
+              </p>
             </div>
+          </div>
 
-            <div>
-              <h3 class="text-lg font-bold text-gray-700">Misi</h3>
-              <ul class="list-disc ml-5 text-gray-600 space-y-1">
-                <li>Memberikan pelayanan kesehatan ibu & anak secara profesional dan humanis.</li>
-                <li>Menyediakan informasi kesehatan yang akurat dan mudah diakses.</li>
-                <li>Mendukung proses persalinan aman dan nyaman bagi setiap ibu.</li>
-                <li>Mengoptimalkan teknologi digital untuk meningkatkan kenyamanan pasien.</li>
-              </ul>
-            </div>
+          <div>
+            <h2 class="text-2xl font-bold text-pink-600 mb-4">🎯 Misi</h2>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3 text-gray-600">
+                <span class="text-pink-500 mt-1">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                </span>
+                <span>Memberikan pelayanan kesehatan ibu & anak secara profesional dan humanis.</span>
+              </li>
+              <li class="flex items-start gap-3 text-gray-600">
+                <span class="text-pink-500 mt-1">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                </span>
+                <span>Menyediakan informasi kesehatan yang akurat dan mudah diakses.</span>
+              </li>
+              <li class="flex items-start gap-3 text-gray-600">
+                <span class="text-pink-500 mt-1">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                </span>
+                <span>Mendukung proses persalinan aman dan nyaman bagi setiap ibu.</span>
+              </li>
+              <li class="flex items-start gap-3 text-gray-600">
+                <span class="text-pink-500 mt-1">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                </span>
+                <span>Mengoptimalkan teknologi digital untuk meningkatkan kenyamanan pasien.</span>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <!-- GALERI FASILITAS -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <div class="rounded-xl overflow-hidden shadow-md">
-            <img src="img/ruang-tunggu.png" alt="Ruang Tunggu Klinik" class="w-full h-56 object-cover" />
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Fasilitas Klinik</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="rounded-xl overflow-hidden shadow-md group border border-gray-100">
+              <div class="overflow-hidden">
+                <img
+                  src="img/ruang-tunggu.png"
+                  alt="Ruang Tunggu Klinik"
+                  class="w-full h-56 object-cover transform group-hover:scale-110 transition duration-500"
+                  onerror="this.src = 'https://via.placeholder.com/300x200?text=Ruang+Tunggu'"
+                />
+              </div>
+              <div class="p-3 bg-white text-center text-sm font-semibold text-gray-600">Ruang Tunggu Klinik</div>
+            </div>
+
+            <div class="rounded-xl overflow-hidden shadow-md group border border-gray-100">
+              <div class="overflow-hidden">
+                <img
+                  src="img/ruang-periksa.png"
+                  alt="Ruang Periksa Klinik"
+                  class="w-full h-56 object-cover transform group-hover:scale-110 transition duration-500"
+                  onerror="this.src = 'https://via.placeholder.com/300x200?text=Ruang+Periksa'"
+                />
+              </div>
+              <div class="p-3 bg-white text-center text-sm font-semibold text-gray-600">Ruang Periksa Klinik</div>
+            </div>
+
+            <div class="rounded-xl overflow-hidden shadow-md group border border-gray-100">
+              <div class="overflow-hidden">
+                <img
+                  src="img/ruang-inap.png"
+                  alt="Ruang Inap Klinik"
+                  class="w-full h-56 object-cover transform group-hover:scale-110 transition duration-500"
+                  onerror="this.src = 'https://via.placeholder.com/300x200?text=Ruang+Inap'"
+                />
+              </div>
+              <div class="p-3 bg-white text-center text-sm font-semibold text-gray-600">Ruang Inap Klinik</div>
+            </div>
           </div>
 
-          <div class="rounded-xl overflow-hidden shadow-md">
-            <img src="img/ruang-periksa.png" alt="Ruang Periksa Klinik" class="w-full h-56 object-cover" />
-          </div>
-
-          <div class="rounded-xl overflow-hidden shadow-md">
-            <img src="img/ruang-inap.png" alt="Ruang Inap Klinik" class="w-full h-56 object-cover" />
+          <div class="mt-6">
+            <video autoplay loop muted class="w-full rounded-xl overflow-hidden shadow-md">
+              <source src="video/room-tour-clinic.mp4" type="video/mp4" />
+              Browser Anda tidak mendukung video.
+            </video>
           </div>
         </div>
 
-        <!--  video galeri fasilitas -->
-         <video controls width="600">
-    <source src="video/Video_Room_Tour_Berdasarkan_Gambar (online-video-cutter.com).mp4" type="video/mp4">
-    Browser Anda tidak mendukung video.
-  </video>
+        <div class="bg-gradient-to-r from-pink-500 to-pink-600 p-8 rounded-2xl text-white shadow-lg">
+          <h2 class="text-2xl font-bold mb-6 text-center">Mengapa Memilih Klinik Bidanku?</h2>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="flex items-center gap-3 bg-white/10 p-3 rounded-lg backdrop-blur-sm">
+              <span class="bg-white text-pink-600 rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs flex-shrink-0">1</span>
+              <span class="font-medium">Bidan berpengalaman dan tersertifikasi.</span>
+            </div>
 
-        <!-- KENAPA MEMILIH KAMI -->
-        <div class="mt-10">
-          <h2 class="text-2xl font-semibold text-primary mb-4">Mengapa Memilih Klinik Bidanku?</h2>
+            <div class="flex items-center gap-3 bg-white/10 p-3 rounded-lg backdrop-blur-sm">
+              <span class="bg-white text-pink-600 rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs flex-shrink-0">2</span>
+              <span class="font-medium">Fasilitas lengkap dan nyaman untuk ibu & anak.</span>
+            </div>
 
-          <ul class="list-disc ml-5 text-gray-600 space-y-1">
-            <li>Bidan berpengalaman dan tersertifikasi.</li>
-            <li>Fasilitas lengkap dan nyaman untuk ibu & anak.</li>
-            <li>Layanan cepat, responsif, dan ramah keluarga.</li>
-            <li>Akses informasi kesehatan yang mudah melalui platform digital.</li>
-          </ul>
+            <div class="flex items-center gap-3 bg-white/10 p-3 rounded-lg backdrop-blur-sm">
+              <span class="bg-white text-pink-600 rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs flex-shrink-0">3</span>
+              <span class="font-medium">Layanan cepat, responsif, dan ramah keluarga.</span>
+            </div>
+
+            <div class="flex items-center gap-3 bg-white/10 p-3 rounded-lg backdrop-blur-sm">
+              <span class="bg-white text-pink-600 rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs flex-shrink-0">4</span>
+              <span class="font-medium">Akses informasi kesehatan yang mudah melalui platform digital.</span>
+            </div>
+          </div>
         </div>
       </div>
     </main>

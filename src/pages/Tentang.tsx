@@ -54,7 +54,7 @@ export default function Tentang() {
             <div className="flex-1 text-center md:text-left">
               <h3 className="text-2xl font-bold text-gray-800">Bidan Siti Aisyah Nurhayati, S.Tr.Keb</h3>
               <span className="inline-block bg-white text-pink-600 text-xs font-bold px-3 py-1 rounded-full mt-2 mb-4 shadow-sm">Head Midwife / Kepala Bidan</span>
-              <p className="text-gray-600 leading-relaxed text-lg">
+              <p className="text-gray-600 leading-relaxed text-lg text-justify">
                 Seorang bidan berpengalaman lebih dari 15 tahun dalam membantu proses persalinan, pendampingan kehamilan, dan edukasi kesehatan ibu & anak. Dengan pendekatan yang lembut dan penuh
                 empati, beliau selalu memastikan setiap ibu merasa aman dan nyaman selama proses pelayanan.
               </p>
@@ -103,6 +103,10 @@ export default function Tentang() {
               </div>
             ))}
           </div>
+          <video autoPlay loop muted className="w-full my-2 rounded-xl overflow-hidden shadow-md">
+            <source src="/video/room-tour-clinic.mp4" type="video/mp4" />
+            Browser Anda tidak mendukung video.
+          </video>
         </div>
 
         {/* KENAPA MEMILIH KAMI */}
